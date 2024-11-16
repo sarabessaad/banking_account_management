@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Details</title>
+</head>
+<body>
+    <h1>Account Details for {{ email }}</h1>
+
+    {% if account %}
+        <p><strong>RIB:</strong> {{ account.rib }}</p>
+        <p><strong>Balance:</strong> {{ account.balance }}</p>
+        <p><strong>Client CIN:</strong> {{ account.client.cin }}</p>
+        <p><strong>Client Name:</strong> {{ account.client.name }} {{ account.client.familyName }}</p>
+        <p><strong>Creation Date:</strong> {{ account.creationDate }}</p>
+    {% else %}
+        <p>No account found for this email.</p>
+    {% endif %}
+</body>
+</html>

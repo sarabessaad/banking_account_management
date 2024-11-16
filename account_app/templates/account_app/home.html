@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Portal</title>
+</head>
+<body>
+    <h1>Find Account Details by Email</h1>
+
+    <!-- Form to find account details -->
+    <form method="get" action="{% url 'account_details' %}">
+        <label for="email">Client Email:</label>
+        <input type="email" name="email" id="email" required>
+        <button type="submit">View Account Details</button>
+    </form>
+
+    <br>
+
+    <!-- Button to redirect to Add Account page -->
+    <form method="get" action="{% url 'add_account' %}">
+        <button type="submit">Add New Account</button>
+    </form>
+</body>
+</html>
